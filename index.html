@@ -4,11 +4,114 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
+ <title>Contact Form</title>
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   background: linear-gradient(135deg, #6a11cb, #2575fc);
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .form-container {
+   background: #fff;
+   padding: 30px 40px;
+   border-radius: 12px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+   width: 100%;
+   max-width: 420px;
+  }
+
+  .form-container h2 {
+   text-align: center;
+   margin-bottom: 20px;
+   color: #333;
+  }
+
+  .form-group {
+   margin-bottom: 15px;
+  }
+
+  label {
+   display: block;
+   margin-bottom: 6px;
+   font-size: 14px;
+   color: #555;
+  }
+
+  input,
+  textarea {
+   width: 100%;
+   padding: 10px 12px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   font-size: 14px;
+   transition: all 0.3s ease;
+  }
+
+  input:focus,
+  textarea:focus {
+   border-color: #2575fc;
+   outline: none;
+   box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+  }
+
+  textarea {
+   resize: none;
+   height: 80px;
+  }
+
+  .btn {
+   width: 100%;
+   padding: 10px;
+   background: linear-gradient(90deg, #6a11cb, #2575fc);
+   border: none;
+   border-radius: 8px;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   transition: transform 0.2s ease, background 0.3s ease;
+  }
+
+  .btn:hover {
+   transform: scale(1.03);
+   background: linear-gradient(90deg, #2575fc, #6a11cb);
+  }
+
+  @media (max-width: 480px) {
+   .form-container {
+    padding: 20px;
+   }
+  }
+ </style>
 </head>
 
 <body>
- <h1>Hello Java</h1>
+ <div class="form-container">
+  <h2>Contact Us</h2>
+  <form>
+   <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+   </div>
+
+   <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+   </div>
+
+   <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write your message..." required></textarea>
+   </div>
+
+   <button type="submit" class="btn">Send Message</button>
+  </form>
+ </div>
 </body>
 
 </html>
